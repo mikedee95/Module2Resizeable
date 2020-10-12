@@ -14,7 +14,8 @@ class Rectangle implements Resizeable
 
     public function resize($number)
     {
-       echo $this->width = $number * $this->width/100 + $this->width;
-       echo $this->height = $number * $this->height/100 + $this->height;
+       $this->width += $number * $this->width/100;
+       $this->height += $number * $this->height/100;
+       return $this->width."<br>".$this->height;
     }
 }
